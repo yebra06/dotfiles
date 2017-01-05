@@ -18,3 +18,6 @@ set hlsearch                            "Highlight matches
 " Sounds
 set noerrorbells                        "Turn off error bells
 
+" Colors
+colo delek
+
