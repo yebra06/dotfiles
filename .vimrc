@@ -1,5 +1,6 @@
 syntax on                       "Enable syntax hl
 set nobackup                    "Use git instead of backups
+set noswapfile                  "No swap files
 set ruler                       "Show line numbers
 set wildignore=*~,*.pyc         "Ignore compiled files
 
@@ -20,4 +21,7 @@ set noerrorbells                        "Turn off error bells
 
 " Colors
 colo delek
+
+" autocmd for filetypes
+autocmd FileType html setlocal shiftwidth=2 tabstop=2
 
