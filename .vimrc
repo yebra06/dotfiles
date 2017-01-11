@@ -11,6 +11,7 @@ set tabstop=4 shiftwidth=4 expandtab
 set softtabstop=4                       "Number of spaces in tab when editing
 set encoding=utf8                       "UTF
 set showmatch                           "Show matching brackets.
+set nostartofline                       "Prevent inserting tokens on newline.
 
 " Use / or ? followed by search item.
 set incsearch                           "Search while typing
