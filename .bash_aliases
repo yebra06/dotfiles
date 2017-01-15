@@ -1,5 +1,8 @@
 # Bash
 alias ls='ls -GFh'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
 
 # Git
 alias st='git status'
