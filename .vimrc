@@ -1,28 +1,35 @@
-syntax on                       "Enable syntax hl
-set nobackup                    "Use git instead of backups
-set noswapfile                  "No swap files
-set ruler                       "Show line numbers
-set wildignore=*~,*.pyc         "Ignore compiled files
+" General
+filetype plugin indent on   " Enable filetype detection
+syntax on                   " Enable syntax highlighting
+set mouse=a                 " Enable mouse to use always
+set nu                      " Show line numbers
+set ruler                   " Show row and col of cursor
 
-" Tabs and Text
-filetype indent on                      "Detect filetype
-set autoindent smartindent              "Smart/auto indent
-set tabstop=4 shiftwidth=4 expandtab
-set softtabstop=4                       "Number of spaces in tab when editing
-set encoding=utf8                       "UTF
-set showmatch                           "Show matching brackets.
-set nostartofline                       "Prevent inserting tokens on newline.
+" Tabs
+set tabstop=4               " How many columns a tab has
+set softtabstop=4           " How many columns in insert mode
+set shiftwidth=4            " Auto c-style
+set expandtab               " Expand tabs to spaces
+set autoindent              " Indent after curlys
 
-" Use / or ? followed by search item.
-set incsearch                           "Search while typing
-set hlsearch                            "Highlight matches
+" Brackets and braces
+set showmatch               " Show matching opening closing symbols
 
-" Sounds
-set noerrorbells                        "Turn off error bells
+" Ignore
+set wildignore=*~,*.pyc     "Ignore compiled files
 
-" Colors
-colo delek
+" Colorz
+" colorscheme blaquemagick
+highlight Normal ctermfg=grey ctermbg=black
 
-" autocmd for filetypes
-autocmd FileType html setlocal shiftwidth=2 tabstop=2
+" To change cursor on insert mode
+" Found here: https://www.reddit.com/r/vim/comments/2of45a/terminal_vim_changing_cursor_shape_on_linux/
+if &term == 'xterm-256color' || &term == 'screen-256color'
+    let &t_SI = "\<Esc>[5 q"
+    let &t_EI = "\<Esc>[1 q"
+endif
+if exists('$TMUX')
+    let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+    let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+endif
 
