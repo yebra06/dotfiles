@@ -1,22 +1,23 @@
 " General
-filetype plugin indent on   " Enable filetype detection
-syntax on                   " Enable syntax highlighting
-set mouse=a                 " Enable mouse to use always
-set nu                      " Show line numbers
-set ruler                   " Show row and col of cursor
+filetype plugin indent on       " Enable filetype detection
+syntax on                       " Enable syntax highlighting
+set mouse=a                     " Enable mouse to use always
+set nu                          " Show line numbers
+set ruler                       " Show row and col of cursor
+set backspace=indent,eol,start  " Enable backspace to function normal
 
 " Tabs
-set tabstop=4               " How many columns a tab has
-set softtabstop=4           " How many columns in insert mode
-set shiftwidth=4            " Auto c-style
-set expandtab               " Expand tabs to spaces
-set autoindent              " Indent after curlys
+set tabstop=4                   " How many columns a tab has
+set softtabstop=4               " How many columns in insert mode
+set shiftwidth=4                " Auto c-style
+set expandtab                   " Expand tabs to spaces
+set autoindent                  " Indent after curlys
 
 " Brackets and braces
-set showmatch               " Show matching opening closing symbols
+set showmatch                   " Show matching opening closing symbols
 
 " Ignore
-set wildignore=*~,*.pyc     "Ignore compiled files
+set wildignore=*~,*.pyc         " Ignore compiled files
 
 " Colorz
 " colorscheme blaquemagick
